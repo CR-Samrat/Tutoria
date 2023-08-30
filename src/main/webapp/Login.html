@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<div id="choiceSelection">
+		<button id="teacherSelect">I am a Teacher</button>
+		<button id="studentSelect">I am a Student</button>
+	</div>
+	<form id="login" hidden=true>
+		<label>Username : </label><input type="text" placeholder="username" name ="uname" id="uname"><br>
+		<label>Password : </label><input type="password" placeholder="password" name="pass" id="pass"><br>
+		<input type="submit" value="login">
+	</form>
+	
+	<label id="error" style="color:red;"></label>
+	<script type="text/javascript" src="./js/logins.js"></script>
+</body>
+</html>

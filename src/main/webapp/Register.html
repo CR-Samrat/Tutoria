@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+	<!-- set everything center oriented  -->
+	<div id="choiceSelection">
+		<button id="teacherSelect">Register as a Teacher</button>
+		<button id="studentSelect">Register as a Student</button>
+	</div>
+	<form id="Register" hidden=true> 
+		<label>Username : </label><input type="text" name="uname" id="uname" placeholder="Username"><br>
+		<label id="userError" style="color:red;"></label><!-- Username validation error  --><br>
+		<label>Email : </label><input type="email" name="email" id="email" placeholder="email"><br>
+		<label id="emailError" style="color:red;"> </label><!-- Username validation error  --><br>
+		<label>Phone : </label><input type="number" name="phone" id="phone" placeholder="phone number"><br>
+		<label id="phoneError" style="color:red;"> </label><!-- Username validation error  --><br>
+		<label>Password : </label><input type="password" name="pass" id="pass" placeholder="password"><br>
+		<!-- user password check validation -->
+		<label>Confirm Password : </label><input type="password" id="cpass" placeholder="confirm password"><br>
+		<input type="submit" value="submit">
+	</form>
+	<script src="./js/validation.js"></script>
+</body>
+</html>

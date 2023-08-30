@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <!--Personal details -->
+        <form action="teacherProfile" method="post" id="tchProfile">
+            <label for="fname">First Name</label><input type="text" name="fname" id="fname" placeholder="First Name" />
+            <br />
+            <label for="lname">Last Name</label><input type="text" name="lname" id="lname"
+                placeholder="Last Name" /><br />
+            <label for="dob">Date of Birth</label><input type="date" name="dob" id="dob"
+                placeholder="dd/mm/yyyy" /><br />
+            <div>
+                <label for="gender Selection">What is your Gender</label><br />
+                <!---->
+                <input type="radio" name="gender" id="Male" placeholder="Gender" value="M" /><label
+                    for="Male">Male</label>
+                <!---->
+                <input type="radio" name="gender" id="Female" placeholder="Gender" value="F" /><label
+                    for="Female">Female</label>
+                <!---->
+                <input type="radio" name="gender" id="Others" placeholder="Gender" value="O" /><label
+                    for="Others">Others</label><br />
+            </div>
+            <div>
+                <label for="qualification">Qualification : </label><input type="text" name="qualification"
+                    id="qualification" placeholder="What is your Highest Qualification" /><br />
+                <label for="qualification">Work Experience : </label><input type="number" name="workExperience"
+                    id="qualification" value="0" max="99" placeholder="experience" /><br />
+                <label for="preferedSubjectPrimary">What is Primary Preferred Subject</label>
+                <select id="preferedSubjectPrimary" name="preferedSubjectPrimary"></select><br />
+                <label for="preferedSubjectPrimary">What is Secondary Preferred Subject</label>
+                <select id="preferedSubjectSecondary" name="preferedSubjectSecondary"></select><br />
+                <!--Short error message if primary and secondary subjects are same-->
+                <section id="errorMessage" style="color: red"></section>
+            </div>
+
+            <!--Preferably second page or second div--->
+            <div>
+                <label for="address">Address</label><input type="text" name="address" /><br />
+                <label for="city">City</label><input type="text" name="city" id="city" placeholder="City Name" /><br>
+                <label for="state">State</label><select name="state" id="state">
+                    <option value=""></option>
+                </select><br>
+                <!---->
+                <input type="hidden" name="country" id="country" value="India" placeholder="Country Name" /><br />
+                <label for="pin">PIN</label><input type="text" name="pin" /><br />
+            </div>
+
+            <input type="submit" value="Submit" id="submit" />
+        </form>
+    </div>
+    <script src="./js/teacherProfile.js"></script>
+</body>
+
+</html>

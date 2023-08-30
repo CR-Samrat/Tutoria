@@ -1,0 +1,178 @@
+        .content
+        {
+            position: absolute;
+            top: 0%;
+            height: 100vh;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            display: none;
+        }
+
+
+
+        .contentnonDisp
+        {
+            animation: disp 0.0s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            animation-delay: 2s;
+        }
+        @keyframes disp {
+            0%
+            {
+
+            }
+            100%
+            {
+                display: none;
+                height: 0;
+                width: 0;
+                transform: scale(0);
+            }
+        }
+
+
+        .bar
+        {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            z-index: 2;
+            background-color: rgba(44, 44, 44, 0.544);
+            transform: scaleY(.00) scaleX(0) translate(-100%,-50%),;
+           
+        }
+        .bardisplay
+        {
+            animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+
+
+        .barnondisplay
+        {
+            animation:unfoldOut 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            animation-delay: 0.8s;
+        }
+
+
+        @keyframes unfoldOut {
+            
+            0% {
+                
+                transform:scaleY(1) scaleX(1) ;
+            }
+        50% {
+                transform:scaleY(.005) scaleX(1) ;
+            }
+        100% {
+                transform:scaleY(.005) scaleX(0) ;
+                opacity: 0.9;
+            }
+        }
+        @keyframes unfoldIn {
+            0% {
+                    transform:scaleY(.005) scaleX(0) ;
+                }
+            50% {
+                    transform:scaleY(.005) scaleX(1) ;
+                }
+            100% {
+                    transform:scaleY(1) scaleX(1) ;
+                    opacity: 0.9;
+                }
+        }
+        .modals
+        {
+            -webkit-animation-delay:3s;
+            animation-delay: 3s;
+            height: 370px;
+            width: 350px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top:50%;
+            left: 50%;
+            border-radius: 10px;
+            z-index: 3;
+            transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%) scale(0.0) ;
+            
+            
+                    
+        }
+        .modalactive
+        {
+            animation: growIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+            animation-delay: 1s;
+        }
+        .modalnotactive
+        {
+            animation: growOut 0.8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+
+        form
+        {
+            height:100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+        form input:not(#submit)
+        {
+            outline: 2px;
+            margin: 10px;
+            border: none;
+            outline: none;
+
+
+            width: 70%;
+            
+
+            border-bottom: 0.1px solid;
+        }
+        .modals span
+        {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            cursor: pointer;
+        }
+        #submit
+        {
+            border: none;
+            height: 10%;
+            width: 65px;
+            border-radius: 5px;
+            background-color: #00A6FF;
+            color: white;
+            transform:translate(0,-0) scale(1);
+            transition: 0.7s ease-in-out;
+        }
+        #submit:hover
+        {
+            transform: scale(1.1);
+            
+        }
+        @keyframes growIn {
+            0% {
+                transform:translate(-50%,-50%) scale(0);
+                opacity: 0;
+                }
+            100% {
+                transform:translate(-50%,-50%) scale(1);
+                opacity: 1;
+                }
+            
+        }
+
+        @keyframes growOut {
+            0% {
+                transform:translate(-50%,-50%) scale(1);
+                opacity: 1;
+                
+                }
+            100% {
+                transform:translate(-50%,-50%) scale(0);
+                opacity: 0;
+                }
+        }
